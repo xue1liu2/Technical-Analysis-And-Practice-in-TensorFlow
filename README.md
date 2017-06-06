@@ -1,4 +1,4 @@
-# Technical-Analysis-And-Practice-in-TensorFlow-
+# Technical-Analysis-And-Practice-in-TensorFlow
 《TensorFlow技术解析与实战》的源码以及补充和讨论
 
 
