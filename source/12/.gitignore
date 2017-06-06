@@ -1,0 +1,42 @@
+#入口文件：train.py
+#源代码出处：https://github.com/tensorflow/models/tree/master/im2txt
+#请看下官方给出的介绍：会给出硬件要求，空出的硬盘空间要至少150G.
+#数据集下载地址：http://msvocds.blob.core.windows.net/coco2014    大小：13G
+#这里会把数据集，进行json解析。
+#  im2txt/im2txt/data 文件夹下是关于下载文件和处理的.sh文件。
+
+
+#整个工程文件下载完毕，打开。会出现一些错误：
+#错误1.  from im2txt.ops import image_embedding  未识别
+#解决：这里说ops下的文件，无法引用。往ops文件夹下添加__int__.py文件。
+#我运行.sh文件，无法运行
+#求助大神，更改.sh文件的部分内容，更改如下：
+set -e
+
+#if [ -z "$1" ]; then
+#  echo "usage download_and_preproces_mscoco.sh [data dir]"
+#  exit
+#fi
+
+if [ "$(uname)" == "Darwin" ]; then
+  UNZIP="tar -xf"
+else
+  UNZIP="unzip -nq"
+fi
+
+# Create the output directories.
+#OUTPUT_DIR="${1%/}"
+OUTPUT_DIR="./"
+SCRATCH_DIR="${OUTPUT_DIR}/raw-data"
+#mkdir -p "${OUTPUT_DIR}"
+mkdir -p "${SCRATCH_DIR}"
+CURRENT_DIR=$(pwd)
+#WORK_DIR="$0.runfiles/im2txt/im2txt"
+WORK_DIR="data"
+剩余的不变：
+
+
+
+#代码，到此为止，基本没有错误
+#各位运行的时候，发现错误，请及时提交错误。
+
