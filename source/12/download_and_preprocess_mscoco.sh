@@ -34,7 +34,6 @@ WORK_DIR="$0.runfiles/im2txt/im2txt"
 BUILD_SCRIPT="${WORK_DIR}/build_mscoco_data"
 eval echo '$'BUILD_SCRIPT
 
-exit
 
 # Helper function to download and unpack a .zip file.
 function download_and_unzip() {
