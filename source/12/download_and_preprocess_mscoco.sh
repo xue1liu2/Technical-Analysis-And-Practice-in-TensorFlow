@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#首先看下，需要安装什么库
 # Script to download and preprocess the MSCOCO data set.
 # 下载和预处理数据
 #输出的是TFRecord格式的文件，build_mscoco_data.py说明了数据如何处理的。
